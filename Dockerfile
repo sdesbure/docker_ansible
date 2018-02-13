@@ -5,9 +5,9 @@ ARG VCS_REF
 ARG BUILD_DATE
 
 LABEL org.label-schema.vcs-ref=$VCS_REF \
-      org.label-schema.vcs-url="https://github.com/willthames/ansible-lint" \
-      org.label-schema.url="https://github.com/willthames/ansible-lint" \
-      org.label-schema.name="ansible lint" \
+      org.label-schema.vcs-url="https://github.com/ansible/ansible" \
+      org.label-schema.url="https://www.ansible.com" \
+      org.label-schema.name="ansible" \
       org.label-schema.docker.dockerfile="/Dockerfile" \
       org.label-schema.license="MIT" \
       org.label-schema.build-date=$BUILD_DATE
