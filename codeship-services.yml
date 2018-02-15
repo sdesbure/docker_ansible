@@ -1,0 +1,7 @@
+---
+version: '2'
+services:
+  docker-lint:
+    image: vpgrp/linter:docker-lint
+  markdown-lint:
+    image: vpgrp/linter:markdown-lint

@@ -1,0 +1,6 @@
+- type: parallel
+  steps:
+    - service: docker-lint
+      command: /usr/bin/docker-lint Dockerfile
+    - service: markdown-lint
+      command: /usr/bin/markdown-lint .
