@@ -1,4 +1,4 @@
-FROM python:3-alpine3.6
+FROM python:3-alpine3.7
 MAINTAINER Sylvain Desbureaux <sylvain@desbureaux.fr>
 
 ARG VCS_REF
