@@ -14,7 +14,7 @@ LABEL org.label-schema.vcs-ref=$VCS_REF \
 
 WORKDIR /playbooks
 
-RUN apk add --no-cache build-base libffi-dev libressl-dev &&\
+RUN apk add --no-cache build-base libffi-dev openssl-dev &&\
     pip install ansible && \
     rm -rf ~/.cache/pip &&\
     apk del build-base
