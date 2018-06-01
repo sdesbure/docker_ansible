@@ -1,4 +1,4 @@
-FROM python:3-alpine3.7
+FROM python:2-stretch
 MAINTAINER Sylvain Desbureaux <sylvain@desbureaux.fr>
 
 ARG VCS_REF
@@ -14,9 +14,16 @@ LABEL org.label-schema.vcs-ref=$VCS_REF \
 
 WORKDIR /playbooks
 
-RUN apk add --no-cache build-base libffi-dev openssl-dev &&\
+RUN apt update &&\
+    apt install -y build-essential python-pip libffi-dev libssl-dev &&\
+    pip install --upgrade pip &&\
     pip install ansible && \
-    rm -rf ~/.cache/pip &&\
-    apk del build-base
+    apt-get remove -y --auto-remove --purge build-essential &&\
+    apt-get clean &&\
+    rm -rf /var/lib/apt/lists/* /tmp/* &&\
+    rm -rf ~/.cache/pip
+
+RUN mkdir -p /etc/ansible
+RUN echo 'localhost' > /etc/ansible/hosts
 
 CMD ["ansible", "--version"]
