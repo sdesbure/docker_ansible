@@ -6,6 +6,10 @@ Latest ansbile release in pip embedded into this docker.
 
 Used to perform ansible playbooks into gitlab ci runner.
 
+## Status
+
+Circle CI: [![CircleCI](https://circleci.com/gh/sdesbure/docker_yamllint/tree/master.svg?style=svg)](https://circleci.com/gh/sdesbure/docker_yamllint/tree/master)
+
 ## Docker image
 
 [![](https://images.microbadger.com/badges/image/sdesbure/ansible.svg)](https://microbadger.com/images/sdesbure/ansible "Get your own image badge on microbadger.com")
