@@ -24,6 +24,6 @@ RUN apt update &&\
     rm -rf ~/.cache/pip
 
 RUN mkdir -p /etc/ansible
-RUN echo 'localhost' > /etc/ansible/hosts
+RUN echo 'localhost ansible_connection=local' > /etc/ansible/hosts
 
 CMD ["ansible", "--version"]
