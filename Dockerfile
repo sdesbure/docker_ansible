@@ -15,7 +15,7 @@ LABEL org.label-schema.vcs-ref=$VCS_REF \
 WORKDIR /playbooks
 
 RUN apt update &&\
-    apt install -y build-essential python-pip libffi-dev libssl-dev &&\
+    apt install -y build-essential python-pip libffi-dev libssl-dev unzip &&\
     pip install --upgrade pip &&\
     pip install ansible && \
     apt-get remove -y --auto-remove --purge build-essential &&\
