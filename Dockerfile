@@ -19,7 +19,8 @@ RUN apt update &&\
                    libffi-dev \
                    libssl-dev \
                    python-jmespath \
-                   python-pip &&\
+                   python-pip \
+                   unzip &&\
     pip install --upgrade pip &&\
     pip install ansible && \
     apt-get remove -y --auto-remove --purge build-essential &&\
