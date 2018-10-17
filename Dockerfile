@@ -16,13 +16,15 @@ WORKDIR /playbooks
 
 RUN apt update &&\
     apt install -y build-essential \
+                   git \
                    libffi-dev \
                    libssl-dev \
+                   openssh-client \
                    python-jmespath \
                    python-pip \
                    unzip &&\
     pip install --upgrade pip &&\
-    pip install ansible && \
+    pip install ansible jmespath && \
     apt-get remove -y --auto-remove --purge build-essential &&\
     apt-get clean &&\
     rm -rf /var/lib/apt/lists/* /tmp/* &&\
