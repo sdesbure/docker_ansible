@@ -1,4 +1,6 @@
-- type: parallel
+- name: linting
+  type: parallel
+  tag: lint
   steps:
     - service: docker-lint
       command: /usr/bin/docker-lint /code/Dockerfile
