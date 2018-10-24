@@ -3,6 +3,7 @@ MAINTAINER Sylvain Desbureaux <sylvain@desbureaux.fr>
 
 ARG VCS_REF
 ARG BUILD_DATE
+ARG ANSIBLE_VERSION=2.7.0
 
 LABEL org.label-schema.vcs-ref=$VCS_REF \
       org.label-schema.vcs-url="https://github.com/ansible/ansible" \
@@ -24,7 +25,7 @@ RUN apt update &&\
                    python-pip \
                    unzip &&\
     pip install --upgrade pip &&\
-    pip install ansible jmespath netaddr && \
+    pip install ansible==$ANSIBLE_VERSION jmespath netaddr && \
     apt-get remove -y --auto-remove --purge build-essential &&\
     apt-get clean &&\
     rm -rf /var/lib/apt/lists/* /tmp/* &&\
