@@ -1,6 +1,6 @@
 - type: parallel
   steps:
     - service: docker-lint
-      command: /usr/bin/docker-lint Dockerfile
+      command: /usr/bin/docker-lint /code/Dockerfile
     - service: markdown-lint
-      command: /usr/bin/markdown-lint README.md
+      command: /usr/bin/markdown-lint /code/README.md

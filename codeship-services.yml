@@ -3,5 +3,10 @@ version: '2'
 services:
   docker-lint:
     image: vpgrp/linter:docker-lint
+    volumes:
+      - ./:/code
   markdown-lint:
     image: vpgrp/linter:markdown-lint
+    volumes:
+      - ./:/code
+
