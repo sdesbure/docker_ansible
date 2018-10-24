@@ -8,7 +8,7 @@ Used to perform ansible playbooks into gitlab ci runner.
 
 ## Status
 
-Circle CI: [![CircleCI](https://circleci.com/gh/sdesbure/docker_yamllint/tree/master.svg?style=svg)](https://circleci.com/gh/sdesbure/docker_yamllint/tree/master)
+Codeship: [ ![Codeship Status for sdesbure/docker_ansible](https://app.codeship.com/projects/144c4700-f49b-0135-3043-0a929467c991/status?branch=master)](https://app.codeship.com/projects/273160)
 
 ## Docker image
 
