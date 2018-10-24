@@ -24,7 +24,7 @@ RUN apt update &&\
                    python-pip \
                    unzip &&\
     pip install --upgrade pip &&\
-    pip install ansible jmespath && \
+    pip install ansible jmespath netaddr && \
     apt-get remove -y --auto-remove --purge build-essential &&\
     apt-get clean &&\
     rm -rf /var/lib/apt/lists/* /tmp/* &&\
