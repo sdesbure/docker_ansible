@@ -21,8 +21,10 @@ RUN apt update &&\
                    libffi-dev \
                    libssl-dev \
                    openssh-client \
+                   python-apt \
                    python-jmespath \
                    python-pip \
+                   rsync \
                    unzip &&\
     pip install --upgrade pip &&\
     pip install ansible==$ANSIBLE_VERSION jmespath netaddr && \
